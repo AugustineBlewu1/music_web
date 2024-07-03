@@ -1,0 +1,24 @@
+<div class="flex flex-col w-64 h-screen bg-violetBlue text-white">
+  <div class="flex items-center justify-center h-16">
+    <h1 class="text-xl font-semibold">musfluent</h1>
+  </div>
+  <nav class="flex-1 px-2 py-4 space-y-1">
+    <ng-container>
+      @for (item of pages; track $index) {
+
+      <div class="flex flex-row">
+  
+          <span class="text-white" [innerHTML]="item.icon"></span>     
+        <a
+          routerLink="`item.link`"
+          class="flex items-center px-2 py-2 text-md font-medium rounded-md hover:text-limeGreen hover:cursor-pointer"
+          routerLinkActive="bg-gray-700"
+          routerLinkActiveOptions="{ exact: true }"
+        >
+          {{ item.name }}
+        </a>
+      </div>
+      }
+    </ng-container>
+  </nav>
+</div>
