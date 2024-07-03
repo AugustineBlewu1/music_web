@@ -8,11 +8,12 @@ import {
   AfterViewInit,
 } from '@angular/core';
 import { Page } from '../../types';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-main-layout',
   standalone: true,
-  imports: [],
+  imports: [ RouterLink, RouterLinkActive],
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.scss',
 })
