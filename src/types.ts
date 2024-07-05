@@ -6,5 +6,9 @@ export interface Page {
     link: string;
     icon: SafeHtml;
   }
+export interface SubPage {
+    name: string;
+    link: string;
+  }
 
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {  RouterOutlet } from '@angular/router';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
-import { Page } from '../types';
+import { Page, SubPage } from '../types';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -71,6 +71,29 @@ export class AppComponent {
 `),
       },
     ];
+
+
   }
-  
+  subPages: SubPage[]  = [
+    {
+      link: "",
+      name: "Discover"
+    },
+    {
+      link :"",
+      name: "Popular",
+    
+    },
+    {
+      link :"",
+      name: "Latest",
+    
+    },
+    {
+      link :"",
+      name: "Trending",
+    
+    }
+  ]
+
 }

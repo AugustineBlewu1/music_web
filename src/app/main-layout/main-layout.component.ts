@@ -6,6 +6,7 @@ import {
   Renderer2,
   ViewChildren,
   AfterViewInit,
+  signal,
 } from '@angular/core';
 import { Page } from '../../types';
 import { RouterLink, RouterLinkActive } from '@angular/router';
@@ -19,5 +20,11 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class MainLayoutComponent {
   @Input() pages: Page[] = [];
+
+   isActiveIndex = signal(0);
+
+  setIsActiveRoute(index: number){
+    this.isActiveIndex.set(index)
+  }
  
 }
