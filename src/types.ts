@@ -10,5 +10,9 @@ export interface SubPage {
     name: string;
     link: string;
   }
+export interface FriendsList {
+  image: string;
+    name: string;
+  }
 
 

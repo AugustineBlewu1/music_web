@@ -15,6 +15,16 @@ module.exports = {
       fontFamily: {
         sans: ['Jost', 'sans-serif'],
       },
+      backdropBlur: {
+        xs: '2px',
+        sm: '4px',
+        md: '8px',
+        lg: '12px',
+        xl: '16px',
+      },
+      backgroundColor: {
+        'glassmorphic': 'rgba(255, 255, 255, 0.2)',
+      },
     },
   },
 

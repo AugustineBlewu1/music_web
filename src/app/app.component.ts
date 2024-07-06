@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {  RouterOutlet } from '@angular/router';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
-import { Page, SubPage } from '../types';
+import { FriendsList, Page, SubPage } from '../types';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -93,6 +93,26 @@ export class AppComponent {
       link :"",
       name: "Trending",
     
+    }
+  ];
+
+
+  friendsList: FriendsList[] = [
+    {
+      image : "",
+      name: "James Foster"
+    },
+    {
+      image: "",
+      name: "Wilson Roy"
+    },
+    {
+      image: "",
+      name: "Jason Mraz"
+    },
+    {
+      image: "",
+      name: "Tom Allan"
     }
   ]
 
