@@ -22,5 +22,11 @@ export interface FriendsList {
     artistName: string;
     artistIcon:string
   }
+  export interface TrendySong {
+    isUserFavorite: boolean,
+    artistSongTitle : string;
+    trendyImage: string;
+    artistName: string;
+  }
 
 
