@@ -15,4 +15,12 @@ export interface FriendsList {
     name: string;
   }
 
+  export interface ArtistBanner {
+    isVerified: boolean,
+    monthlyListeners : number;
+    artistBanner: string;
+    artistName: string;
+    artistIcon:string
+  }
+
 
