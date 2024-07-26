@@ -1,0 +1,29 @@
+
+
+@if (isOpen()) {
+
+
+<div
+  class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50"
+ 
+>
+  <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+    <h2 class="text-xl font-semibold mb-4">{{ title }}</h2>
+    <p class="mb-4">{{ message }}</p>
+    <div class="flex justify-end">
+      <button
+        class="bg-blue-500 text-white px-4 py-2 rounded mr-2"
+        (click)="confirm()"
+      >
+        Confirm
+      </button>
+      <button
+        class="bg-gray-500 text-white px-4 py-2 rounded"
+        (click)="close()"
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>
+}
