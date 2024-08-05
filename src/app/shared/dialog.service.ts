@@ -6,13 +6,13 @@ import { Subject } from 'rxjs';
 })
 export class DialogService {
 
-  private dialogState = new Subject<{  title: string, message: string }>();
+  // private dialogState = new Subject<{  title: string, message: string }>();
 
-  dialogState$ = this.dialogState.asObservable();
+  // dialogState$ = this.dialogState.asObservable();
 
-  openDialog(title: string, message: string) {
-    this.dialogState.next({ title, message });
-  }
+  // openDialog(title: string, message: string) {
+  //   this.dialogState.next({ title, message });
+  // }
 
   
 }

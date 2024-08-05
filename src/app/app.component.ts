@@ -6,18 +6,19 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { DialogService } from './shared/dialog.service';
 import { Subscription } from 'rxjs';
 import { DialogComponent } from "./shared/dialog/dialog.component";
+import { AngMusicPlayerModule } from  'ang-music-player';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [RouterOutlet, MainLayoutComponent, DialogComponent],
+  imports: [RouterOutlet, MainLayoutComponent, DialogComponent  ],
 })
 export class AppComponent implements OnInit {
   title = 'music_app';
   pages: Page[];
-  @ViewChild(DialogComponent) dialog!: DialogComponent;
+  // @ViewChild(DialogComponent) dialog!: DialogComponent;
 
 
   constructor(private sanitizer: DomSanitizer, private dialogService: DialogService) {
@@ -123,12 +124,12 @@ export class AppComponent implements OnInit {
   ]
 
   ngOnInit(){
-     this.dialogService.dialogState$.subscribe(state => {
+    //  this.dialogService.dialogState$.subscribe(state => {
 
-      this.dialog.title = state.title;
-      this.dialog.message = state.message;
-      this.dialog.open();
-    });
+    //   this.dialog.title = state.title;
+    //   this.dialog.message = state.message;
+    //   this.dialog.open();
+    // });
   }
 
   // openDialog(){
@@ -136,17 +137,17 @@ export class AppComponent implements OnInit {
   //   this.dialog.nativeElement.showModal()
   // }
 
-  openGlobalDialog() {
-    this.dialogService.openDialog('Global Dialog Title', 'This is a global dialog message.');
-  }
+  // openGlobalDialog() {
+  //   this.dialogService.openDialog('Global Dialog Title', 'This is a global dialog message.');
+  // }
 
-  onDialogConfirmed() {
-    console.log('Dialog confirmed!');
-  }
+  // onDialogConfirmed() {
+  //   console.log('Dialog confirmed!');
+  // }
 
-  onDialogClosed() {
-    console.log('Dialog closed!');
-  }
+  // onDialogClosed() {
+  //   console.log('Dialog closed!');
+  // }
 
 
 }

@@ -7,16 +7,16 @@ import { Component, Input, Output, EventEmitter, ViewChild, ElementRef, AfterVie
   templateUrl: './dialog.component.html',
   styleUrl: './dialog.component.scss'
 })
-export class DialogComponent implements AfterViewInit {
+export class DialogComponent  {
   // @Input() isOpen = false;
   @Input() title = '';
   @Input() message = '';
   @ViewChild('dialogDiv') dialog!: ElementRef<HTMLDialogElement>
   isOpen = signal(false);
 
-  ngAfterViewInit() {
-    this.dialog.nativeElement.close();
-  }
+  // ngAfterViewInit() {
+  //   this.dialog.nativeElement.close();
+  // }
 
   confirm() {
     this.isOpen.update((va) => !va)
